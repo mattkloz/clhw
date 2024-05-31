@@ -1,6 +1,4 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Context Labs Homework Assignment
 
 ## Setup
 
@@ -70,6 +68,38 @@ yarn preview
 
 # bun
 bun run preview
+```
+
+Run Lint:
+
+```bash
+# npm
+npm run lint
+
+# pnpm
+pnpm run lint
+
+# yarn
+yarn lint
+
+# bun
+bun run lint
+```
+
+Run ViTest:
+
+```bash
+# npm
+npm run test
+
+# pnpm
+pnpm run test
+
+# yarn
+yarn test
+
+# bun
+bun run test
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
