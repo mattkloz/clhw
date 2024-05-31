@@ -1,7 +1,7 @@
 <script lang="ts">
 export default {
     data: () => ({
-        links: ['User Dashboard', 'Messages', 'Profile', 'Updates'],
+        links: ['User Dashboard'],
     }),
 }
 </script>
@@ -21,7 +21,7 @@ export default {
                 disabled
             />
 
-            <v-spacer/>
+            <v-spacer />
 
             <v-responsive max-width="160">
                 <v-text-field

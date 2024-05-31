@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <v-col cols="4" class="card-transition">
+    <v-col cols="12" md="4" class="card-transition">
         <v-card class="h-100 w-100 d-flex flex-column" hover>
             <template #prepend>
                 <v-avatar color="blue-darken-2 mr-3" size="48">

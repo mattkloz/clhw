@@ -49,7 +49,7 @@ export default {
                         hide-details
                     />
 
-                    <v-spacer/>
+                    <v-spacer />
                     <v-btn-toggle
                         v-model="layout_type"
                         mandatory
@@ -58,14 +58,8 @@ export default {
                         class="ml-5"
                         base-color="grey-lighten-2"
                     >
-                        <v-btn
-                            icon="mdi-view-grid-outline"
-                            value="grid"
-                        />
-                        <v-btn
-                            icon="mdi-format-list-bulleted"
-                            value="list"
-                        />
+                        <v-btn icon="mdi-view-grid-outline" value="grid" />
+                        <v-btn icon="mdi-format-list-bulleted" value="list" />
                     </v-btn-toggle>
                 </v-toolbar>
             </template>
