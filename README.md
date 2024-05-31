@@ -70,6 +70,8 @@ yarn preview
 bun run preview
 ```
 
+## Linting
+
 Run Lint:
 
 ```bash
@@ -85,6 +87,8 @@ yarn lint
 # bun
 bun run lint
 ```
+
+## Testing
 
 Run ViTest:
 
