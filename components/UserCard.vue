@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-    user?: iUser
+    user: iUser
     index?: number
     selected?: number
 }>()

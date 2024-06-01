@@ -1,12 +1,11 @@
 <script setup lang="ts">
-const { data: users } = (await useFetch('/api/users')) as {
-    data: iUser[]
-}
+const { data: users } = await useFetch('/api/users')
 
 // use  the useStripTags composable to remove html tags from the name field
 const userList = computed(() => {
-    return users.value.default.map((user) => {
-        const chekeckedUser = user as iUser
+    if (!users.value) return []
+    return users.value.default.map((user: iUser) => {
+        const chekeckedUser = user
         chekeckedUser.name = useStripTags(user.name)
         return chekeckedUser
     })
@@ -19,8 +18,8 @@ export default {
         return {
             search: '',
             layout_type: 'grid',
-            selectedCard: null,
-            userPanel: null,
+            selectedCard: undefined as number | undefined,
+            userPanel: undefined as number | undefined,
         }
     },
 }
@@ -34,8 +33,18 @@ export default {
             item-value="name"
             class="h-100 d-flex flex-column bg-blue pa-3 flex-grow-1"
             item-class="h-100"
-            :items-per-page="users.default.length"
+            :items-per-page="userList.length"
         >
+            <template #no-data>
+                <v-card
+                    class="d-flex flex-column align-center justify-center py-3 mt-5"
+                >
+                    <v-icon size="48" color="grey">mdi-account-search</v-icon>
+                    <p class="text-h6 text-center">
+                        {{ $t('no_results') }}
+                    </p>
+                </v-card>
+            </template>
             <template #header>
                 <v-toolbar class="px-2 bg-blue">
                     <v-text-field
