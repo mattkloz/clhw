@@ -16,7 +16,7 @@ useHead({
                             rounded="lg"
                             class="h-100 d-flex overflow-auto"
                         >
-                            <UserExplorer />
+                            <UserDashboard />
                         </v-sheet>
                     </v-col>
                 </v-row>

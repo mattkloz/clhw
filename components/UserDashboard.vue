@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const { data: users } = await useFetch('/api/users')
+const { data: users } = await useFetch('/api/users', {
+    onRequestError({ request, error }) {
+        console.error('[fetch request error]', request, error)
+    },
+})
 
 // use  the useStripTags composable to remove html tags from the name field
 const userList = computed(() => {
