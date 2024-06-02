@@ -32,7 +32,7 @@ export default {
 <template>
     <v-card class="h-100 w-100 d-flex flex-column overflow-auto bg-blue">
         <v-data-iterator
-            :items="userList"
+            :items="userList as iUser[]"
             :search="search"
             item-value="name"
             class="h-100 d-flex flex-column bg-blue pa-3 flex-grow-1"

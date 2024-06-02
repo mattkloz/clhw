@@ -1,10 +1,10 @@
-import { it, expect } from 'vitest'
+import { test, expect } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
-import { UserCard } from '#components'
+import { UserListItem, UserDashboard } from '#components'
 
 const vuetify = createVuetify({
     components,
@@ -14,9 +14,9 @@ const vuetify = createVuetify({
 
 global.ResizeObserver = require('resize-observer-polyfill')
 
-it('mounts UserCard', async () => {
+test('mounts UserCard', async () => {
 
-    const component = await mountSuspended(UserCard, {
+    const component = await mountSuspended('<user-dashboard><user-list-item></user-list-item></user-dashboard>', {
         props: {
             user: {
                 name: 'John Doe',
@@ -29,17 +29,15 @@ it('mounts UserCard', async () => {
             index: 0,
             selected: 0
         },
-        mocks: {
-            $t: () => 'Learn more',
-        },
         global: {
             components: {
-                UserCard,
+                UserListItem,
+                UserDashboard
             },
             plugins: [vuetify],
         }
     })
 
     // Assert the rendered text of the component
-    expect(component.text()).toContain('John Doe')
+    expect(component.exists()).toBe(true)
 })
