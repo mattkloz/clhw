@@ -1,5 +1,19 @@
 # Context Labs Homework Assignment
 
+## Assumptions
+
+* Name fields should not contain HTML tags
+* The list comnponent(s) satisfy state management for the given task
+* Components should work on desktop and mobile devices (responsive)
+* The 'user' type should be available globally
+* With vuetify as the component/style library, minimize custom component use
+* included i18n for internationalisation
+* included prettier and eslint for formatting and linting
+* included vitest for testing
+  * test for each component
+  * test for app.vue
+  * test for composables
+
 ## Setup
 
 Make sure to install the dependencies:
