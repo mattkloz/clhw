@@ -12,7 +12,7 @@ const panelExpanded = computed(() => {
 </script>
 
 <template>
-    <v-expansion-panel bg-color="white" class="w-100">
+    <v-expansion-panel bg-color="white">
         <template #title>
             <v-card
                 :title="user.name"

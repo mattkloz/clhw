@@ -2,7 +2,7 @@
 
 ## Assumptions
 
-* Name fields should not contain HTML tags
+* Name fields ***should not*** contain HTML tags
 * The list comnponent(s) satisfy state management for the given task
 * Components should work on desktop and mobile devices (responsive)
 * The 'user' type should be available globally
@@ -13,6 +13,7 @@
   * test for each component
   * test for app.vue
   * test for composables
+* Included 'depracations' json list in the api reponse header
 
 ## Setup
 

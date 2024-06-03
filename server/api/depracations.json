@@ -1,0 +1,8 @@
+[
+    {
+        "field": "nationality",
+        "depracated": "true",
+        "newField": "country",
+        "newFieldDescription": "Country of origin"
+    }
+]

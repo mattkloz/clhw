@@ -3,6 +3,10 @@ const { data: users } = await useFetch('/api/users', {
     onRequestError({ request, error }) {
         console.error('[fetch request error]', request, error);
     },
+    onResponse({ request, response, options }) {
+        // Process the response data
+        console.log('[fetch response]', response, options);
+    },
 });
 
 // use  the useStripTags composable to remove html tags from the name field
@@ -30,7 +34,9 @@ export default {
 </script>
 
 <template>
-    <v-card class="h-100 w-100 d-flex flex-column overflow-auto bg-blue">
+    <v-card
+        class="h-100 w-100 d-flex flex-column overflow-auto bg-blue rounded-sm"
+    >
         <v-data-iterator
             :items="userList as iUser[]"
             :search="search"
@@ -105,16 +111,15 @@ export default {
                         <v-fade-transition hide-on-leave>
                             <v-row
                                 v-show="layout_type === 'list'"
-                                class="bg-transparent w-100"
+                                class="bg-transparent"
                             >
                                 <v-card
                                     max-height="60vh"
-                                    class="overflow-auto w-100"
+                                    class="overflow-auto bg-white"
                                 >
                                     <v-expansion-panels
                                         v-model="userPanel"
                                         elevation="0"
-                                        bg-color="transparent"
                                     >
                                         <UserListItem
                                             v-for="(item, index) in items"
