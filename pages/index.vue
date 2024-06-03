@@ -2,7 +2,7 @@
 useHead({
     title: 'ContextLabs Homework Assignment',
     meta: [{ name: 'description', content: 'My Homework Assignment' }],
-})
+});
 </script>
 
 <template>

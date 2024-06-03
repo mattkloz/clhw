@@ -1,18 +1,18 @@
-import { test, expect } from 'vitest'
-import { mountSuspended } from '@nuxt/test-utils/runtime'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+import { test, expect } from 'vitest';
+import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { createVuetify } from 'vuetify';
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
 
-import { UserCard } from '#components'
+import { UserCard } from '#components';
 
 const vuetify = createVuetify({
     components,
     directives
-})
+});
 
 
-global.ResizeObserver = require('resize-observer-polyfill')
+global.ResizeObserver = require('resize-observer-polyfill');
 
 test('mounts UserCard', async () => {
 
@@ -38,8 +38,8 @@ test('mounts UserCard', async () => {
             },
             plugins: [vuetify],
         }
-    })
+    });
 
     // Assert the rendered text of the component
-    expect(component.text()).toContain('John Doe')
+    expect(component.text()).toContain('John Doe');
 });

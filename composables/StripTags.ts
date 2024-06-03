@@ -9,7 +9,7 @@ export function useStripTags(originalString: string) {
         for (let i = (tmp.children.length - 1); i >= 0; i--) {
             tmp.children[i].parentNode?.removeChild(tmp.children[i])
         }
-    }
+    };
 
     // return the text content of the DIV element
     return tmp.textContent || tmp.innerText || "";

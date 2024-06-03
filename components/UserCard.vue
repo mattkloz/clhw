@@ -1,9 +1,9 @@
 <script setup lang="ts">
 defineProps<{
-    user: iUser
-    index?: number
-    selected?: number
-}>()
+    user: iUser;
+    index?: number;
+    selected?: number;
+}>();
 </script>
 
 <script lang="ts">
@@ -11,7 +11,7 @@ export default {
     data: () => ({
         expanded: false,
     }),
-}
+};
 </script>
 
 <template>

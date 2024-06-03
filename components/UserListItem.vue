@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const props = defineProps<{
-    user: iUser
-    index: number
-    openPanel?: number
-}>()
+    user: iUser;
+    index: number;
+    openPanel?: number;
+}>();
 
-// checking to see if this panel is expanded
+// checking to see if this panel is expanded, might be a better way to do this
 const panelExpanded = computed(() => {
-    return props.openPanel === props.index
-})
+    return props.openPanel === props.index;
+});
 </script>
 
 <template>

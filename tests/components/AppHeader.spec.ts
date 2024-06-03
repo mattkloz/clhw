@@ -1,17 +1,17 @@
-import { test, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+import { test, expect } from 'vitest';
+import { mount } from '@vue/test-utils';
+import { createVuetify } from 'vuetify';
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
 
-import { AppHeader } from '#components'
+import { AppHeader } from '#components';
 
 const vuetify = createVuetify({
     components,
     directives
-})
+});
 
-global.ResizeObserver = require('resize-observer-polyfill')
+global.ResizeObserver = require('resize-observer-polyfill');
 
 test('mounts header', () => {
     const wrapper = mount({
@@ -30,8 +30,8 @@ test('mounts header', () => {
             },
             plugins: [vuetify],
         }
-    })
+    });
 
     // Assert the rendered text of the component
-    expect(wrapper.html()).toContain('v-layout')
-})
+    expect(wrapper.html()).toContain('v-layout');
+});

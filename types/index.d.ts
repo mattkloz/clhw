@@ -8,4 +8,4 @@ declare global {
         quote: string;
         nationality: string;
     }
-}
+};

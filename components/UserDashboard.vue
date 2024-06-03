@@ -1,19 +1,19 @@
 <script setup lang="ts">
 const { data: users } = await useFetch('/api/users', {
     onRequestError({ request, error }) {
-        console.error('[fetch request error]', request, error)
+        console.error('[fetch request error]', request, error);
     },
-})
+});
 
 // use  the useStripTags composable to remove html tags from the name field
 const userList = computed(() => {
-    if (!users.value) return []
+    if (!users.value) return [];
     return users.value.default.map((user: iUser) => {
-        const chekeckedUser = user
-        chekeckedUser.name = useStripTags(user.name)
-        return chekeckedUser
-    })
-})
+        const chekeckedUser = user;
+        chekeckedUser.name = useStripTags(user.name);
+        return chekeckedUser;
+    });
+});
 </script>
 
 <script lang="ts">
@@ -24,9 +24,9 @@ export default {
             layout_type: 'grid',
             selectedCard: undefined as number | undefined,
             userPanel: undefined as number | undefined,
-        }
+        };
     },
-}
+};
 </script>
 
 <template>
