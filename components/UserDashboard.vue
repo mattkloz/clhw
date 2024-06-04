@@ -3,10 +3,6 @@ const { data: users } = await useFetch('/api/users', {
     onRequestError({ request, error }) {
         console.error('[fetch request error]', request, error);
     },
-    onResponse({ request, response, options }) {
-        // Process the response data
-        console.log('[fetch response]', response, options);
-    },
 });
 
 // use  the useStripTags composable to remove html tags from the name field
